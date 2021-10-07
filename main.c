@@ -53,7 +53,7 @@ int main(void) {
 	for (i = 0; i < n - 1; ++i) {
 		ch[p] = true; // The top of the line is marked
 		for (j = 0; j < n; ++j) { // Cycle by line
-			if ((gr[i][j] == true) && (ch[j] == false)) {
+			if ((ch[j] == false) && (gr[i][j] == true)) {
 				p = j;
 				break;
 			}
@@ -71,7 +71,7 @@ int main(void) {
 	}
 	if (e != n) // If e is not equal to the number of vertices, then
 		r = false; // The r variable takes on the value "false"
-	
+	free (ch);
 	if (r == true) // If r is true, then the graph is a simple cycle
 		printf("The graph is a simple cycle");
 	else 
