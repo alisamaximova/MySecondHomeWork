@@ -1,6 +1,0 @@
-graph MySecondHomeWork {
-	1 -- 2;
-	1 -- 4;
-	2 -- 3;
-	3 -- 4;
-}
