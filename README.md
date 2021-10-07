@@ -53,6 +53,7 @@ We create a .gv file, where we will record all the connections of our graph, i.e
 ```
 Next, we check the graph for cyclicality, moving through our dynamic array. 
 We created a separate pointer to the array, which is zeroed at the very beginning, so that later we could use it to determine whether the graph is a simple cycle or not.
+Checking is reduced to traversing the graph in depth and painting the traversed vertices
 ```c
 	bool* ch = (bool*) calloc(n, sizeof(bool)); // We create an index on the mass for checking the cycle of the graph
 	
