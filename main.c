@@ -53,7 +53,7 @@ int main(void) {
 	for (i = 0; i < n - 1; ++i) {
 		ch[p] = true; // The top of the line is marked
 		for (j = 0; j < n; ++j) { // Cycle by line
-			if ((ch[j] == false) && (gr[i][j] == true)) {
+			if ((ch[j] == false) && (gr[i][j] == 1)) {
 				p = j;
 				break;
 			}
@@ -61,12 +61,12 @@ int main(void) {
 		if (j == n) // If the counter j is the correct mass length / number of points
 			r = false; // The r variable takes on the value "false"
 	}
-	if (gr[p][pos] == false) 
+	if (gr[p][pos] == 0) 
 		r = false;
 	
 	for (i = 0; i < n; ++i) {
 		for (j = i; j < n ; ++j)
-			if (gr[i][j] == true)
+			if (gr[i][j] == 1)
 				++e;
 	}
 	if (e != n) // If e is not equal to the number of vertices, then
